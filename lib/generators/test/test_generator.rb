@@ -4,7 +4,6 @@ module AfterParty
       source_root File.expand_path('../templates', __FILE__)
 
       def create_test_file
-        puts '++++++++++++++'
         @clean_file_name = file_name.gsub(/\d{14}_{1}/, '')
         fail file_exist_warning if File.exist?(file_extension)
         template "test_template.erb", file_extension
